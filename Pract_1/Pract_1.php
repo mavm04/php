@@ -21,9 +21,9 @@
         <input type="text" id="dni" name="dni"><br/>
 
         <label for="sexo">Sexo</label><br>
-        <input type="radio" id="hombre" name="hombre">
+        <input type="radio" id="hombre" name="sex" checked>
         <label for="hombre" id="hombre" name="hombre">hombre</label><br>
-        <input type="radio" id="mujer" name="mujer">
+        <input type="radio" id="mujer" name="sex">
         <label for="mujer" id="mujer" name="mujer">mujer</label><br><br>
 
         <label for="foto" id="foto" name="foto">Incluir mi foto: </label>
