@@ -9,10 +9,10 @@
     <h1>Rellena tu CV</h1>
     <form action="recogida_datos.php" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre</label><br/>
-        <input type="text" id="nombre" name="nombre"><br/>
+        <input type="text" id="nombre" name="nombre" placeholder="Teclee su nombre" maxlength=15 required><br/>
         
         <label for="apellido">Apellido</label><br/>
-        <input type="text" id="apellido" name="apellido"><br/>
+        <input type="text" id="apellido" name="apellido" placeholder="Teclee su apellido"><br/>
 
         <label for="contraseña">Contraseña</label><br/>
         <input type="text" id="contraseña" name="contraseña"><br/>
