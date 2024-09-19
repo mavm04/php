@@ -7,7 +7,6 @@
 </head>
 <body>
     <?php
-        
         //declaracion de variables
         $texto1 = "Juan";
         $texto2 = "Maria";
@@ -19,5 +18,7 @@
         echo"<p>".$texto1." y ".$texto2."</p>";
         echo"<p> El resultado de sumar ".$a." + ".$b." es igual a ".($a+$b)."</php>";
     ?>
+    
+    <h2><?php echo"Otro ejemplo.." ?></h2>
 </body>
 </html>
