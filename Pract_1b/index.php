@@ -1,3 +1,15 @@
+<?php
+    if (isset($_POST["btnEnviar"])) {
+        $error_nombre=($_POST["nombre"]=="");
+        $error_apellido=($_POST["apellido"]=="");
+        $error_contraseña=($_POST["contraseña"]=="");
+        $error_dni=($_POST["dni"]=="");
+        $error_sexo=!isset($_POST["sexo"]);
+        $error_comentarios=($_POST["comentarios"]=="");
+        $error_form=$error_nombre||$error_apellido||$error_contraseña||$error_dni||$error_sexo||$error_comentarios;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +21,10 @@
 
 <body>
     <?php
-        if (isset($_POST["btnEnviar"])) {
-            require "vitas/vistaRecogida.php";
+        if (isset($_POST["btnEnviar"]) && !$error_form) {
+            require "vistas/vistaRecogida.php";
         } else {
-            require "vitas/vistaFormulario.php";
+            require "vistas/vistaFormulario.php";
         }
     ?>
 </body>
