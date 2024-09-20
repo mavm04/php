@@ -8,7 +8,7 @@
             }
         ?>
     <label for="apellido">Apellido</label><br />
-    <input type="text" id="apellido" name="apellido" placeholder="Teclee su apellido">
+    <input type="text" id="apellido" name="apellido" placeholder="Teclee su apellido" value="<?php if (isset($_POST["apellido"])) {echo $_POST["apellido"];} ?>">
     <?php
             if (isset($_POST["btnEnviar"]) && $error_apellido) {
                 echo"<spam>*Campo vacio*</spam>";
@@ -24,7 +24,7 @@
         ?>
         <br />
     <label for="dni">DNI</label><br />
-    <input type="text" id="dni" name="dni">
+    <input type="text" id="dni" name="dni" value="<?php if (isset($_POST["dni"])) {echo $_POST["dni"];} ?>">
     <?php
             if (isset($_POST["btnEnviar"]) && $error_dni) {
                 echo"<spam>*Campo vacio*</spam>";
@@ -53,7 +53,7 @@
     </select><br><br>
 
     <label for="comentarios">Comentarios:</label>
-    <textarea name="comentarios" id="comentarios"></textarea>
+    <textarea name="comentarios" id="comentarios" value="<?php if (isset($_POST["comentarios"])) {echo $_POST["comentarios"];} ?>"></textarea>
     <?php
             if (isset($_POST["btnEnviar"]) && $error_comentarios) {
                 echo"<spam>*Campo vacio*</spam>";
