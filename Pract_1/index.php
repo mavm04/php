@@ -15,15 +15,15 @@
         <input type="text" id="apellido" name="apellido" placeholder="Teclee su apellido"><br/>
 
         <label for="contraseña">Contraseña</label><br/>
-        <input type="text" id="contraseña" name="contraseña"><br/>
+        <input type="password" id="contraseña" name="contraseña"><br/>
 
         <label for="dni">DNI</label><br/>
         <input type="text" id="dni" name="dni"><br/>
 
         <label for="sexo">Sexo</label><br>
-        <input type="radio" id="hombre" name="sex" checked>
+        <input type="radio" id="hombre" name="sex" value="mujer" checked>
         <label for="hombre" id="hombre" name="hombre">hombre</label><br>
-        <input type="radio" id="mujer" name="sex">
+        <input type="radio" id="mujer" name="sex" value="mujer">
         <label for="mujer" id="mujer" name="mujer">mujer</label><br><br>
 
         <label for="foto" id="foto" name="foto">Incluir mi foto: </label>
@@ -42,7 +42,7 @@
         <input type="checkbox" name="suscribirse" id="suscribirse">
         <label for="suscribirse">Suscribirse al boletin de novedades</label><br><br>
 
-        <button type="submit">Guardar Cambios</button>
+        <button type="submit" value="guardarCambios" name="btnEnviar">Guardar Cambios</button>
         <button type="reset">Borrar los datos introducidos</button>
     </form>
 </body>
