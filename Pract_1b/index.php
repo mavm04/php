@@ -1,4 +1,9 @@
 <?php
+
+    if (isset($_POST["btnBorrar"])) {
+        header("Location:index.php");
+        exit;
+    }
     if (isset($_POST["btnEnviar"])) {
         $error_nombre=($_POST["nombre"]=="");
         $error_apellido=($_POST["apellido"]=="");

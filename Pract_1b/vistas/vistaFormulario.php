@@ -32,8 +32,8 @@
         ?>
         <br />
     <label for="sexo">Sexo</label><br>
-    <input type="radio" id="hombre" name="sex" value="mujer" checked>
-    <label for="hombre" id="hombre" name="hombre">hombre</label>
+    <input type="radio" id="hombre" name="sex" value="mujer">
+    <label for="hombre" id="hombre" name="hombre">hombre <?php if(isset($_POST["sex"])) ?></label>
     <input type="radio" id="mujer" name="sex" value="mujer">
     <label for="mujer" id="mujer" name="mujer">mujer</label>
     <?php
@@ -47,9 +47,9 @@
 
     <label for="lugarNacimiento">Nacido en: </label>
     <select id="ciudad" name="ciudad">
-        <option value="malaga">Malaga</option>
-        <option value="sevilla">Sevilla</option>
-        <option value="granada">Granada</option>
+        <option <?php if(isset($_POST['ciudad']) == "malaga") echo "selected" ?> value="malaga">Malaga</option>
+        <option <?php if(isset($_POST['ciudad']) == "sevilla") echo "selected" ?> value="sevilla">Sevilla</option>
+        <option <?php if(isset($_POST['ciudad']) == "granada") echo "selected" ?> value="granada">Granada</option>
     </select><br><br>
 
     <label for="comentarios">Comentarios:</label>
@@ -64,5 +64,5 @@
     <label for="suscribirse">Suscribirse al boletin de novedades</label><br><br>
 
     <button type="submit" value="guardarCambios" name="btnEnviar">Guardar Cambios</button>
-    <button type="reset">Borrar los datos introducidos</button>
+    <button type="submit" name="btnBorrar">Borrar los datos introducidos</button>
 </form>
