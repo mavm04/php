@@ -1,3 +1,22 @@
+<?php
+//si esta en el array te devuelve true, sino false
+function mi_in_array($elemento, $array)
+{
+    $esta = false;
+    for ($i = 0; $i < count($array); $i++) {
+        if ($elemento[$i] == $array[$i]) {
+            $esta = true;
+            break;
+        }
+    }
+}
+if (isset($_POST["btnEnviar"])) {
+    $error_nombre = $_POST["nombre"] == "";
+    $error_sexo = !isset($_POST["sexo"]);
+    $error_form = $error_nombre || $error_sexo;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +28,17 @@
 
 <body>
     <?php
-
     if (isset($_POST["btnEnviar"]) && !$error_form) {
-        require "vistas/vistaRecogida.php";
+        require "vista/vista_recogida.php";
     } else {
-        require "vistas/vistaFormulario.php";
+        require "vistas/vista_formulario.php";
     }
-    
+    ?>
+
+
+
+    <?php
+
     echo "<p>Nombre: <strong>" . $_POST["nombre"] . "</strong></p>";
     echo "<p>Apellido: <strong>" . $_POST["apellido"] . "</strong></p>";
     echo "<p>Contraseña: <strong>" . $_POST["contraseña"] . "</strong></p>";
