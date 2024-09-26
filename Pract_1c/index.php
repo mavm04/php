@@ -29,35 +29,10 @@ if (isset($_POST["btnEnviar"])) {
 <body>
     <?php
     if (isset($_POST["btnEnviar"]) && !$error_form) {
-        require "vista/vista_recogida.php";
+        require "vistas/vista_recogida.php";
     } else {
         require "vistas/vista_formulario.php";
     }
     ?>
-
-
-
-    <?php
-
-    echo "<p>Nombre: <strong>" . $_POST["nombre"] . "</strong></p>";
-    echo "<p>Apellido: <strong>" . $_POST["apellido"] . "</strong></p>";
-    echo "<p>Contraseña: <strong>" . $_POST["contraseña"] . "</strong></p>";
-    echo "<p>Dni: <strong>" . $_POST["dni"] . "</strong></p>";
-
-    echo "<p>Sexo:</p>";
-    if (isset($_POST["sex"])) {
-        echo "<strong>" . $_POST["sex"] . "</strong>";
-    }
-
-    echo "<p>Ciudad: <strong>" . $_POST["ciudad"] . "</strong></p>";
-    echo "<p>Comentarios: <strong>" . $_POST["comentarios"] . "</strong></p>";
-
-    if (isset($_POST["suscribirse"])) {
-        echo "<p>Suscrito: <strong> Si </strong></p>";
-    } else {
-        echo "<p>Suscrito: <strong> No </strong></p>";
-    }
-    ?>
 </body>
-
 </html>
