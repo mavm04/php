@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <h1>Array Merge</h1><br>
+
+    <?php
+        $arr1 = array("Lagartija","Araña","Perro","Gato","Raton");
+        $arr2 = array("12","34","45","52","12");
+        $arr3 = array("Sauce","Pino","Naranjo","Chopo","Perro","34");
+        $arr4 = array_merge($arr1, $arr2, $arr3);
+        print_r($arr4);
+    ?>
+</body>
+</html>
