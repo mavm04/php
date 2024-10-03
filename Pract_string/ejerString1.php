@@ -74,7 +74,7 @@
     <div id="divRipios">
         <h1 class="h1Cent">Ripios - Formulario</h1>
         <p id="pTitulo">Dime dos palabras y te dire si riman o no.</p>
-        <form action="index.php" method="post" id="formRipios"  enctype="multipart/form-data">
+        <form action="ejerString1.php" method="post" id="formRipios"  enctype="multipart/form-data">
             <label for="primeraPalabra">Primera palabra: </label>
             <input name="primeraPalabra" type="text" id="primeraPalabra"  value="<?php if(isset($_POST['primeraPalabra']) && $errores_form) {echo $_POST['primeraPalabra'];} ?>">
             <?php
