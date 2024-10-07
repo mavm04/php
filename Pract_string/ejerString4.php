@@ -54,7 +54,6 @@ if (isset($_POST['btnComparar'])) {
     }
     $error_cant_num = comprobarCantNum();
 
-     
     $errores_form = $error_numero || $error_formato || $error_cant_num;
 }
 
