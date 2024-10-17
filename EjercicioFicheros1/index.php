@@ -10,10 +10,6 @@
         $rutaCarpeta = 'Tablas/';
         $rutaFichero = $rutaCarpeta . $nomFichero; 
 
-        if (!file_exists($rutaCarpeta)) {
-            mkdir($rutaCarpeta, 0777, true);
-        }
-
         if (!file_exists($rutaFichero)) {
             $fichero = fopen($rutaFichero, "w");
             for ($i = 1; $i <= 10; $i++) { 
