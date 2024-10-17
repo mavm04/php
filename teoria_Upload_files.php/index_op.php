@@ -7,7 +7,6 @@ function tiene_extension($texto)
     } else {
         $respuesta = end($array_nombre);
     }
-
     return $respuesta;
 }
 
@@ -73,6 +72,7 @@ if (isset($_POST["brnEnviar"])) {
         $ext = tiene_extension($_FILES["foto"]["name"]);
         $nombre_imagen = "img_" . $numero_unico . "." . $ext;
 
+        //pa que no salgan los warning @
         @$var = move_uploaded_file($_FILES["foto"]["tmp_name"], "images/" . $nombre_imagen);
 
         if (!$var) {
@@ -86,8 +86,8 @@ if (isset($_POST["brnEnviar"])) {
         }
 
     }
-    /*
-    // devuelve la letra del dni
+    
+    /* devuelve la letra del dni
     function LetraNIF($dni) 
         {  
             return substr("TRWAGMYFPDXBNJZSQVHLCKEO", $dni % 23, 1); 

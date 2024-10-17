@@ -18,7 +18,6 @@
             || $_FILES['foto']['size'] > 500*1024);
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +78,6 @@
                 echo "<p><strong>Archivo subido temporalmente: ".$_FILES['foto']['tmp_name']."</p>";
                 echo "<p><img src='images/".$nombre_imagen."' alt='Imagen Subida' title='Imagen'></p>";
             }
-
         }
     ?>
 </body>
